@@ -27,7 +27,7 @@ spring:
           predicates:
             - Path=/openapi/**
         - id: eureka-web-start
-          uri: http://eureka:8761
+          uri: http://eureka
           predicates:
             - Path=/eureka/web
           filters:
