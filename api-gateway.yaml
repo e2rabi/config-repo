@@ -40,7 +40,8 @@ spring:
           uri: http://localhost:8888
           predicates:
             - Path=/config/**
-          filters: RewritePath=/config/(?<segment>.*),/$\{segment}
+          filters: 
+            - RewritePath=/config/(?<segment>.*),/$\{segment}
 
 app:
   eureka:
