@@ -3,7 +3,7 @@ spring:
   main:
     web-application-type: reactive
   application:
-    name: api-gateway
+    name: api-gateway-docker
   cloud:
     gateway:
       discovery:
