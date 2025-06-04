@@ -10,6 +10,9 @@ spring:
     web-application-type: reactive
   application:
     name: api-gateway-docker
+  config:
+    activate:
+      on-profile: docker
   cloud:
     gateway:
       discovery:
