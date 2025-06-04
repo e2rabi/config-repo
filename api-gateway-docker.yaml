@@ -27,17 +27,17 @@ spring:
           predicates:
             - Path=/openapi/**
         - id: eureka-web-start
-          uri: http://localhost:8761
+          uri: http://eureka:8761
           predicates:
             - Path=/eureka/web
           filters:
             - SetPath=/
         - id: eureka-web-others
-          uri: http://localhost:8761
+          uri: http://eureka
           predicates:
             - Path=/eureka/**
         - id: config-server
-          uri: http://localhost:8888
+          uri: http://config-server
           predicates:
             - Path=/config/**
           filters: 
