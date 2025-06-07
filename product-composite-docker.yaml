@@ -3,7 +3,7 @@ server:
   port: 8080
 spring:
   application:
-    name: product-composite-service
+    name: product-composite
   config:
     activate:
       on-profile: docker
@@ -54,3 +54,38 @@ eureka:
   client:
     service-url:
       defaultZone: "http://${app.eureka.username}:${app.eureka.password}@eureka:8761/eureka/"
+resilience4j:
+  circuitbreaker:
+    instances:
+      productService:
+        registerHealthIndicator: true
+        slidingWindowSize: 5
+        minimumNumberOfCalls: 3
+        failureRateThreshold: 4
+        waitDurationInOpenState: 5s
+        ignore-exceptions:
+          - ma.errabi.sdk.exception.EntityNotFoundException
+  retry:
+    instances:
+      productServiceRetry:
+        maxAttempts: 3
+        waitDuration: 1s
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  health:
+    circuitBreakers:
+      enabled: true
+logging:
+  level:
+    org.springframework.cloud.client.loadbalancer: DEBUG
+    org.springframework.web.reactive.function.client: DEBUG
+    org.springframework.cloud.netflix.eureka: DEBUG
