@@ -19,11 +19,11 @@ spring:
           lower-case-service-id: true
       routes:
         - id: product-composite
-          uri: lb://product-composite-service
+          uri: lb://product-composite
           predicates:
             - Path=/v1/product-composite/**
         - id: product-composite-swagger
-          uri: lb://product-composite-service
+          uri: lb://product-composite
           predicates:
             - Path=/openapi/**
         - id: eureka-web-start
@@ -50,6 +50,13 @@ eureka:
   client:
     serviceUrl:
       defaultZone: "http://${app.eureka.username}:${app.eureka.password}@eureka:8761/eureka/"
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans
 logging:
   level:
     root: info
