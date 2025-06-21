@@ -80,7 +80,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: *
+        include: "*"
   health:
     circuitBreakers:
       enabled: true
