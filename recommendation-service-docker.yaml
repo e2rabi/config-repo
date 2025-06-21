@@ -39,7 +39,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: *
+        include: "*"
 app:
   eureka:
     username: admin
