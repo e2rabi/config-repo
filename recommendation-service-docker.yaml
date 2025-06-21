@@ -1,8 +1,11 @@
 
 server:
     port: 8080
-
 spring:
+  boot:
+    admin:
+      client:
+        url: http://metric-server:8889
   application:
     name: recommendation-service
   datasource:
@@ -33,6 +36,10 @@ management:
   zipkin:
     tracing:
       endpoint: http://zipkin:9411/api/v2/spans
+  endpoints:
+    web:
+      exposure:
+        include: *
 app:
   eureka:
     username: admin
