@@ -24,7 +24,7 @@ spring:
           destination: recommendation
       kafka:
         binder:
-          brokers: kafka-service:9092
+          brokers: kafka-service
 springdoc:
   swagger-ui.path: /openapi/swagger-ui.html
   api-docs.path: /openapi/v3/api-docs
