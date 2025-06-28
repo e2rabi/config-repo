@@ -1,6 +1,9 @@
 server:
   port: 8080
+  shutdown: graceful
 spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
   boot:
     admin:
       client:
@@ -32,9 +35,9 @@ app:
   product-service:
     host: http://product-service:8081
   review-service:
-    host: http://REVIEW-SERVICE
+    host: http://review-service:8082
   recommendation-service:
-    host: http://RECOMMENDATION-SERVICE
+    host: http://recommendation-service:8083
   eureka:
     username: admin
     password: admin
