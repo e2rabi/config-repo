@@ -8,6 +8,9 @@ spring:
     admin:
       client:
         url: http://metric-service:8889
+        instance:
+          metadata:
+            name: product-composite-service
   application:
     name: product-composite
   config:
