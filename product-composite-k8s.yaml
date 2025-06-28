@@ -7,7 +7,7 @@ spring:
   boot:
     admin:
       client:
-        url: http://metric-server:8889
+        url: http://metric-service:8889
   application:
     name: product-composite
   config:
