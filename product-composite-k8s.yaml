@@ -38,9 +38,9 @@ app:
   product-service:
     host: http://product-service:8081
   review-service:
-    host: http://review-service:8082
+    host: http://review-service:8083
   recommendation-service:
-    host: http://recommendation-service:8083
+    host: http://recommendation-service:8082
   eureka:
     username: admin
     password: admin
