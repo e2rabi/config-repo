@@ -17,6 +17,9 @@ spring:
     web-application-type: reactive
   application:
     name: api-gateway
+  config:
+    activate:
+      on-profile: k8s
   cloud:
     gateway:
       discovery:
