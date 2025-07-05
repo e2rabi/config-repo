@@ -101,6 +101,7 @@ management:
       enabled: true
 logging:
   level:
+    root: debug
     org.springframework.cloud.client.loadbalancer: DEBUG
     org.springframework.web.reactive.function.client: DEBUG
     org.springframework.cloud.netflix.eureka: DEBUG
