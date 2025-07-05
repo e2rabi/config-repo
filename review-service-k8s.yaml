@@ -7,7 +7,7 @@ spring:
   boot:
     admin:
       client:
-        url: "http://${METRIC_SERVICE_SERVICE_HOST}:${METRIC_SERVICE_SERVICE_SERVICE_PORT}"
+        url: "http://${METRIC_SERVICE_SERVICE_HOST}:${METRIC_SERVICE_SERVICE_PORT}"
   application:
     name: review-service
   config:
