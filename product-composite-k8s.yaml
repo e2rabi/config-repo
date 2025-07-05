@@ -38,7 +38,7 @@ app:
   product-service:
     host: http://product-service:8081
   review-service:
-    host: http://review-service:8083
+    host: ${REVIEW_SERVICE_HOST}
   recommendation-service:
     host: http://recommendation-service:8082
   eureka:
