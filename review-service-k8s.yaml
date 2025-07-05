@@ -24,6 +24,8 @@ spring:
       ddl-auto: create-drop
     show-sql: true
   cloud:
+    loadbalancer:
+      enabled: false
     stream:
       bindings:
         deleteReviewConsumer-in-0:
