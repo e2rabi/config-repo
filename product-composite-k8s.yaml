@@ -17,6 +17,8 @@ spring:
     activate:
       on-profile: k8s
   cloud:
+    loadbalancer:
+      enabled: false
     stream:
       bindings:
         output-out-0:
