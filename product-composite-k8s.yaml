@@ -61,6 +61,7 @@ api:
       email: contact@mail.com
 eureka:
   client:
+    enabled: false
     service-url:
       defaultZone: "http://${app.eureka.username}:${app.eureka.password}@eureka-service:8761/eureka/"
 resilience4j:
@@ -101,6 +102,3 @@ logging:
     org.springframework.cloud.client.loadbalancer: DEBUG
     org.springframework.web.reactive.function.client: DEBUG
     org.springframework.cloud.netflix.eureka: DEBUG
-eureka:
-  client:
-    enabled: false
