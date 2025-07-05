@@ -9,8 +9,9 @@ spring:
       client:
         url: "http://${METRIC_SERVICE_SERVICE_HOST}:${METRIC_SERVICE_SERVICE_PORT}"
         instance:
+          service-base-url: "http://${REVIEW-SERVICE_SERVICE_HOST}:${REVIEW-SERVICE_SERVICE_PORT}"
           metadata:
-            name: product-composite-service
+            name: review-service-k8s
   application:
     name: review-service
   config:
