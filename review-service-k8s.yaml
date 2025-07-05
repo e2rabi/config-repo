@@ -40,6 +40,7 @@ app:
     password: admin
 eureka:
   client:
+    enabled: false
     service-url:
       defaultZone: "http://${app.eureka.username}:${app.eureka.password}@eureka-service:8761/eureka/"
 management:
