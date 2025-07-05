@@ -8,6 +8,9 @@ spring:
     admin:
       client:
         url: "http://${METRIC_SERVICE_SERVICE_HOST}:${METRIC_SERVICE_SERVICE_PORT}"
+        instance:
+          metadata:
+            name: product-composite-service
   application:
     name: review-service
   config:
