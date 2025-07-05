@@ -16,7 +16,7 @@ spring:
         instance:
           service-base-url: "http://${API_GATEWAY_SERVICE_SERVICE_HOST}:${API_GATEWAY_SERVICE_SERVICE_PORT}"
           metadata:
-            name: api-gateway-service-k8s
+            name: api-gateway-service
   main:
     web-application-type: reactive
   application:
