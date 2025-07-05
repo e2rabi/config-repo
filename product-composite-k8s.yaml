@@ -9,6 +9,7 @@ spring:
       client:
         url: "http://${METRIC_SERVICE_SERVICE_HOST}:${METRIC_SERVICE_SERVICE_PORT}"
         instance:
+          service-base-url: "http://${PRODUCT_COMPOSITE_SERVICE_SERVICE_HOST}:${PRODUCT_COMPOSITE_SERVICE_SERVICE_PORT}"
           metadata:
             name: product-composite-service
   application:
